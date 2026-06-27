@@ -1,0 +1,28 @@
+# OPC超级个体训练营 · Cloudflare 部署配置
+# 使用前重命名为 wrangler.toml 并填入实际值
+
+# ── Worker（后端 API）─────────────────────────────────────────
+name = "opc-api"
+main = "cloudflare-worker.js"
+compatibility_date = "2025-01-01"
+
+[[kv_namespaces]]
+binding = "MATERIALS_KV"
+id = "your-kv-namespace-id"
+preview_id = "your-kv-preview-id"
+
+[[r2_buckets]]
+binding = "MATERIALS_BUCKET"
+bucket_name = "opc-materials"
+
+[vars]
+EDIT_CODE = "OPC-EDIT-2026"
+VIEW_CODE = "OPC-VIEW-2026"
+
+# ── Pages（前端静态站点）──────────────────────────────────────
+# 部署命令（在项目根目录执行）：
+# npx wrangler pages deploy . --project-name=opc-camp --branch=main
+
+# Pages 环境变量（可选）：
+# [env.production.vars]
+# API_BASE = "https://opc-api.your-name.workers.dev"

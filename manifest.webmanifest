@@ -1,0 +1,18 @@
+{
+  "name": "OPC超级个体训练营",
+  "short_name": "OPC训练营",
+  "description": "OPC超级个体训练营爆款模版库与执行引流SOP",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0c0e14",
+  "theme_color": "#7a5cff",
+  "icons": [
+    {
+      "src": "assets/icons/opc-app.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
